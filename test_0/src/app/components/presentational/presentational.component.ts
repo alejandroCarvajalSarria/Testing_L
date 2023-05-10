@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, Input, Output, EventEmitter} from '@angular/core';
+import { Course } from 'src/app/model/course';
 
 @Component({
   selector: 'app-presentational',
@@ -7,6 +8,14 @@ import { Component } from '@angular/core';
 })
 export class PresentationalComponent {
 
-  list:any[] = [];
+
+  @Input()
+  list!: Course[];
+
+  @Output()
+  courseEdited = new EventEmitter();
+
+
 
 }
+ 

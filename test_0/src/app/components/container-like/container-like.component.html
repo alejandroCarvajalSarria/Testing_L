@@ -2,8 +2,10 @@ All courses:
 
 <ng-container *ngIf="(beginnerCourses$ | async) as beginnerCourses">
 
-    <section id="beginner" *ngIf="beginnerCourses?.length > 0">
-        <app-presentational></app-presentational>
+    <section  *ngIf="beginnerCourses?.length > 0" (click)="chooseCourses('beginner')"> 
+      <div id="beginner">
+        <app-presentational [list]="beginnerCourses" (courseEdited)="reloadCourses()"></app-presentational>
+      </div>
     </section>
 
   </ng-container>
@@ -11,8 +13,10 @@ All courses:
 
   <ng-container  *ngIf="(advancedCourses$ | async) as advancedCourses">
 
-    <section id="advanced" *ngIf="advancedCourses?.length > 0">
-        <app-presentational></app-presentational>
+    <section  *ngIf="advancedCourses?.length > 0" (click)="chooseCourses('advanced')"> 
+      <div id="advanced" >
+        <app-presentational [list]="advancedCourses" (courseEdited)="reloadCourses()"></app-presentational>
+      </div>
     </section>
 
   </ng-container>

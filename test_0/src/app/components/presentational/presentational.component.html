@@ -1,7 +1,7 @@
 
 <div id="mainTesterDiv">
 
-    <div *ngFor="let item of list; index as i" class="testConts">
+    <div *ngFor="let item of list; index as i" class="testConts" [ngClass]="{'advancedCourse': item.category === 'ADVANCED'}" >
         <div class="item-title">{{item.titles.description}}</div>
 
 
