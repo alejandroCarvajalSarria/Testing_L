@@ -1,0 +1,14 @@
+
+<div id="mainTesterDiv">
+
+    <div *ngFor="let item of list; index as i" class="testConts">
+        <div class="item-title">{{item.titles.description}}</div>
+
+
+        <div class="d-block">
+            <img [src]="item.iconUrl">
+        </div>
+
+    </div>
+
+</div>

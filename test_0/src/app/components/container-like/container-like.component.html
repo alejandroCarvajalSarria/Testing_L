@@ -1,0 +1,18 @@
+All courses:
+
+<ng-container *ngIf="(beginnerCourses$ | async) as beginnerCourses">
+
+    <section id="beginner" *ngIf="beginnerCourses?.length > 0">
+        <app-presentational></app-presentational>
+    </section>
+
+  </ng-container>
+
+
+  <ng-container  *ngIf="(advancedCourses$ | async) as advancedCourses">
+
+    <section id="advanced" *ngIf="advancedCourses?.length > 0">
+        <app-presentational></app-presentational>
+    </section>
+
+  </ng-container>
