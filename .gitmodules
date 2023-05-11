@@ -1,3 +1,6 @@
 [submodule "udemy-course"]
 	path = udemy-course
 	url = https://github.com/angular-university/angular-testing-course
+[submodule "udemy-rxjs-testing"]
+	path = udemy-rxjs-testing
+	url = https://github.com/alejandroCarvajalSarria/RxJS-unit-testing-udemy.git
